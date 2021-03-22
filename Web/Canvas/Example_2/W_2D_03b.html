@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Welcome to the company</h3>
+    <canvas id="logo" width="900" height="80">
+        <h1>Our Company</h1>
+    </canvas>
+    <script>
+        var drawLogo = function () {
+            var canvas = document.getElementById("logo");
+            var context = canvas.getContext("2d");
+
+            context.strokeStyle = "#00FF00";
+            context.fillStyle = "#FF0000";
+
+            context.lineWidth = 2;
+            context.beginPath();
+
+            context.moveTo(0, 40);
+            context.lineTo(30, 0);
+            context.lineTo(60, 40);
+            context.lineTo(285, 40);
+
+            context.fill();
+            context.closePath();
+
+
+            context.stroke();
+        }
+
+        var canvas = document.getElementById("logo");
+        if (canvas.getContext) {
+            drawLogo();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangles 1</title>
+    <style>
+        body {
+            margin: 0px auto;
+            text-align: center;
+        }
+    </style>
+
+
+    <script>
+        window.onload = setup2d;
+
+        function setBg () {
+            return randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            
+        }
+
+        function setup2d() {
+            const canvas = document.getElementById("my-canvas");
+            const context = canvas.getContext("2d");
+            context.fillStyle = "#"+ setBg();
+            context.fillRect(0, 0, 75, 75);
+            context.fillStyle = "#"+ setBg();
+            context.fillRect(75, 75, 150, 150);
+            context.fillStyle = "#"+ setBg();
+            context.fillRect(0, 75, 75, 75);
+            context.fillStyle = "#"+ setBg();
+            context.fillRect(75, 0, 75, 75);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to the canvas</h1>
+    <h2>We see a white canvas on a white background.</h2>
+    <canvas id="my-canvas" width="150" height="150">
+        Your browser does not support the HTML5 canvas element.
+    </canvas>
+</body>
+
+</html>
